@@ -17,9 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-primary text-text`}>
-        <Navigation />
-        {children}
+      <body className={`${inter.className} min-h-screen bg-[#0a192f] text-[#8892b0] antialiased`}>
+        <div className="relative min-h-screen bg-[#0a192f]">
+          <Navigation />
+          <main className="relative bg-[#0a192f]">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );

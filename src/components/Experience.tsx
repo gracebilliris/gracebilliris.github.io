@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const experiences = [
     {
@@ -107,19 +108,19 @@ export default function Experience() {
                             className="bg-primary/30 p-6 rounded-lg flex gap-6 items-start"
                         >
                             <div className="w-16 h-16 flex-shrink-0 bg-primary/60 rounded-lg overflow-hidden flex items-center justify-center">
-                                <img
+                                <Image
                                     src={exp.logo}
                                     alt={exp.company}
+                                    width={64}
+                                    height={64}
                                     className="w-full h-full object-contain p-2"
-                                    loading="lazy"
                                     onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
                                         const target = e.currentTarget;
                                         target.style.display = 'none';
-                                        target.insertAdjacentHTML('afterend', 
-                                            `<div class="w-full h-full flex items-center justify-center text-2xl font-bold text-secondary">
-                                                ${exp.company.split(' ').map(word => word[0]).join('')}
-                                            </div>`
-                                        );
+                                        const fallback = document.createElement('div');
+                                        fallback.className = 'w-full h-full flex items-center justify-center text-2xl font-bold text-secondary';
+                                        fallback.textContent = exp.company.split(' ').map(word => word[0]).join('');
+                                        target.parentElement?.appendChild(fallback);
                                     }}
                                 />
                             </div>
