@@ -18,11 +18,11 @@ export default function Hero() {
           Software Engineer & PhD Candidate
         </h2>
         <p className="text-lg md:text-xl mb-8 max-w-2xl">
-          I am a software engineer working in industry and a PhD candidate in Software Engineering at the University of Technology Sydney. I am motivated by solving complex problems and understanding the systems behind them, with research focused on data privacy risks in agentic AI systems.
+          I am a Software Engineer at Macquarie Group and a PhD candidate in Software Engineering at the University of Technology Sydney. I am motivated by solving complex problems and understanding the systems behind them, with research focused on data privacy risks in agentic AI systems.
         </p>
         <div className="flex gap-4">
           <a
-            href="#resume"
+            href="#experience"
             className="inline-block bg-secondary text-primary px-8 py-3 rounded-lg font-medium hover:bg-opacity-80 transition-colors"
           >
             Resume

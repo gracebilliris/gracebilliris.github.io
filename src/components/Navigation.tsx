@@ -3,6 +3,15 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+const workLinks = [
+    { label: "CAPRA Prototype", href: "https://gracebilliris.github.io/capra-prototype/" },
+    { label: "PARA", href: "https://gracebilliris.github.io/para-privacy-anonymisation-risk-assessor/" },
+    { label: "F1 Telemetry Analysis", href: "https://gracebilliris.github.io/formula-one-telemetry-and-data-analysis-tool/" },
+    { label: "Professional Skills Guide", href: "https://gracebilliris.github.io/professional-skills-guide/" },
+    { label: "Say Find", href: "https://gracebilliris.github.io/say-find/" },
+    { label: "Caffeine Committee", href: "https://gracebilliris.github.io/caffeine-committee/" },
+];
+
 const Navigation = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,7 +41,7 @@ const Navigation = () => {
                             Grace Billiris
                         </a>
                     </div>
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden lg:flex items-center space-x-6 text-sm">
                         <a
                             href="#about"
                             className="text-text hover:text-textLight transition-colors"
@@ -52,13 +61,49 @@ const Navigation = () => {
                             PROJECTS
                         </a>
                         <a
+                            href="#publications"
+                            className="text-text hover:text-textLight transition-colors"
+                        >
+                            PUBLICATIONS
+                        </a>
+                        <div className="relative group">
+                            <button
+                                type="button"
+                                className="flex items-center gap-1 py-5 text-text hover:text-textLight transition-colors"
+                                aria-haspopup="true"
+                            >
+                                MY WORK
+                                <svg
+                                    className="h-3 w-3"
+                                    viewBox="0 0 12 12"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M2 4l4 4 4-4H2z" />
+                                </svg>
+                            </button>
+                            <div className="absolute right-0 top-full hidden w-64 rounded-md border border-secondary/10 bg-[#0a192f]/95 py-2 shadow-xl group-hover:block group-focus-within:block">
+                                {workLinks.map((link) => (
+                                    <a
+                                        key={link.href}
+                                        href={link.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block px-4 py-2.5 text-text hover:bg-secondary/10 hover:text-textLight transition-colors"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                        <a
                             href="#contact"
                             className="text-text hover:text-textLight transition-colors"
                         >
                             CONTACT
                         </a>
                     </div>
-                    <div className="flex md:hidden items-center">
+                    <div className="flex lg:hidden items-center">
                         {/* Mobile menu button */}
                         <button
                             className="text-text hover:text-textLight"
@@ -82,7 +127,7 @@ const Navigation = () => {
 
             {/* Mobile menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-primary/95 p-4">
+                <div className="lg:hidden bg-primary/95 p-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
                     <div className="flex flex-col space-y-4">
                         <a
                             href="#about"
@@ -105,6 +150,30 @@ const Navigation = () => {
                         >
                             PROJECTS
                         </a>
+                        <a
+                            href="#publications"
+                            className="text-text hover:text-textLight transition-colors"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            PUBLICATIONS
+                        </a>
+                        <div className="border-t border-secondary/10 pt-4">
+                            <p className="mb-2 text-xs font-semibold tracking-wider text-secondary">MY WORK</p>
+                            <div className="flex flex-col space-y-3 pl-3">
+                                {workLinks.map((link) => (
+                                    <a
+                                        key={link.href}
+                                        href={link.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-text hover:text-textLight transition-colors"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
                         <a
                             href="#contact"
                             className="text-text hover:text-textLight transition-colors"

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Grace Billiris - Portfolio',
-  description: 'Personal portfolio website showcasing my work and experience',
+  description: 'Portfolio of Grace Billiris, Software Engineer at Macquarie Group and PhD candidate at the University of Technology Sydney.',
 };
 
 export default function RootLayout({

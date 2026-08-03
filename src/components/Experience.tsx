@@ -5,20 +5,20 @@ import Image from "next/image";
 
 const experiences = [
     {
-        title: "Casual Academic",
-        company: "University of Technology Sydney",
-        period: "February 2023 - Present",
-        description:
-            "Performed activities such as leading tutorials, blended learning (online), and demonstrations, as well as marking, student consultations, and administrative duties.",
-        logo: "https://www.uts.edu.au/sites/default/files/2020-06/UTS-logo-2.png",
-    },
-    {
         title: "Software Engineer",
         company: "Macquarie Group",
         period: "February 2024 - Present",
         description:
-            "Performed activities related to AWS Cloud Governance, Compliance, Security and FinOps, including supporting cloud operations, data ingestion and management, enhancing security practices, and contributing to cost optimisation initiatives.",
+            "Contributes to reliable software systems in a large-scale financial services environment, with experience across AWS cloud governance, compliance, security, data management, cloud operations, and cost optimisation.",
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Macquarie_Group_logo.svg/2560px-Macquarie_Group_logo.svg.png",
+    },
+    {
+        title: "Casual Academic",
+        company: "University of Technology Sydney",
+        period: "February 2023 - Present",
+        description:
+            "Leads tutorials, blended learning activities, and demonstrations, and supports marking, student consultations, and academic administration.",
+        logo: "https://www.uts.edu.au/sites/default/files/2020-06/UTS-logo-2.png",
     },
     {
         title: "Sales Consultant",

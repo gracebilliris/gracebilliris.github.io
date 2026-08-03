@@ -18,7 +18,7 @@ export default function About() {
                 <h2 className="text-3xl md:text-4xl font-bold text-textLight mb-8">About Me</h2>
                 <div className="prose prose-invert max-w-none">
                     <p className="text-lg mb-4">
-                        I am a software engineer working in industry and a PhD candidate in Software Engineering at the University of Technology Sydney. I have always been motivated by solving complex problems and understanding the systems behind them. What began as an early curiosity for technical challenges has grown into a focus on addressing real-world problems in software engineering and artificial intelligence.
+                        I am a Software Engineer at Macquarie Group and a PhD candidate in Software Engineering at the University of Technology Sydney. I have always been motivated by solving complex problems and understanding the systems behind them. What began as an early curiosity for technical challenges has grown into a focus on addressing real-world problems in software engineering and artificial intelligence.
                     </p>
                     <p className="text-lg mb-4">
                         My research focuses on data privacy risks in agentic AI systems that process personally identifiable information. Previously, my honours research explored the intersection of generative AI and copyright law, resulting in the development of the Copyright Health Checker (CHC) tool and a publication in the ACM Digital Library.
