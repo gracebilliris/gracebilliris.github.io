@@ -81,6 +81,42 @@ export default function Publications() {
                 >
                     Publications
                 </motion.h2>
+                <motion.article
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-10 rounded-lg border border-secondary/20 bg-primary/30 p-6 md:p-8"
+                >
+                    <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-secondary">Featured Publication</p>
+                    <h3 className="mb-3 text-xl md:text-2xl font-semibold text-textLight">
+                        A Federated Observability Architecture Pattern for Reliable Agentic AI Software Systems Across the AI Software Development Lifecycle
+                    </h3>
+                    <p className="mb-3 text-text">
+                        Published in the A-ranked journal <em>Information and Software Technology</em>, Volume 199, Article 108260 (2026).
+                    </p>
+                    <p className="mb-5 text-text">
+                        FOAP introduces a seven-layer, schema-agnostic architecture for federating, normalising, retaining, and observing heterogeneous
+                        telemetry across the AI software development lifecycle.
+                    </p>
+                    <div className="flex flex-wrap gap-4">
+                        <a
+                            href="https://doi.org/10.1016/j.infsof.2026.108260"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-md bg-secondary px-4 py-2 font-medium text-primary hover:bg-secondary/80 transition-colors"
+                        >
+                            Read the Paper
+                        </a>
+                        <a
+                            href="https://github.com/gracebilliris/federated-observability-architecture-pattern"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-md border border-secondary px-4 py-2 font-medium text-secondary hover:bg-secondary/10 transition-colors"
+                        >
+                            View the Prototype
+                        </a>
+                    </div>
+                </motion.article>
                 <motion.ol
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
