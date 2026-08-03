@@ -46,6 +46,24 @@ const publications = [
         href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7194446",
         linkLabel: "SSRN 7194446",
     },
+    {
+        citation: (
+            <>
+                Billiris, G., Gill, A., Oppermann, I., &amp; Niazi, M. (2024). Towards the development of a copyright risk checker tool for generative artificial intelligence systems. <em>Digital Government: Research and Practice, 5</em>(4), Article 41.
+            </>
+        ),
+        href: "https://doi.org/10.1145/3703459",
+        linkLabel: "https://doi.org/10.1145/3703459",
+    },
+    {
+        citation: (
+            <>
+                Billiris, G., &amp; Gill, A. Q. (2024). An initial review of the copyright concerns of generative artificial intelligence. <em>ACIS 2024 Proceedings</em>, Article 17.
+            </>
+        ),
+        href: "https://aisel.aisnet.org/acis2024/17/",
+        linkLabel: "ACIS 2024 Proceedings",
+    },
 ];
 
 export default function Publications() {
