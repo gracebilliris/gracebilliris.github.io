@@ -15,18 +15,20 @@ const publications = [
     {
         citation: (
             <>
-                Billiris, G., Gill, A., Haggag, O., Bandara, M., &amp; Grundy, J. (2026). CPL: A context processing layer for semantic observability in multi-agent AI systems [Preprint accepted by SSRN]. <em>SSRN</em> 7194446.
+                Billiris, G., Gill, A., Haggag, O., Bandara, M., &amp; Grundy, J. (2026). CPL: A context processing layer for semantic observability in multi-agent AI systems. <em>SSRN</em> 7194446.
             </>
         ),
-        href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7194446",
-        linkLabel: "SSRN 7194446",
+        href: "https://doi.org/10.2139/ssrn.7194446",
+        linkLabel: "https://doi.org/10.2139/ssrn.7194446",
     },
     {
         citation: (
             <>
-                Billiris, G., Gill, A., &amp; Bandara, M. (2026). Systematic literature review of data privacy risks in AI systems. Accepted for the SAI Computing Conference 2026.
+                Billiris, G., Gill, A., &amp; Bandara, M. (2026). Systematic literature review of data privacy risks in AI systems. <em>Science and Information Computing Conference (SAI) 2026</em>.
             </>
         ),
+        href: "https://link.springer.com/book/10.1007/978-3-032-24810-7",
+        linkLabel: "Published proceedings",
     },
     {
         citation: (

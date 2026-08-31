@@ -35,10 +35,9 @@ export default function Research() {
                             and combines systematic literature reviews, empirical taxonomies, design science, and prototype development.
                         </p>
                         <p className="text-text">
-                            The research has produced taxonomies of data risks in AI, quantum computing, and data privacy; an accepted systematic literature
-                            review for the SAI Computing Conference 2026; and a federated observability architecture pattern published in
-                            <em> Information and Software Technology</em>. Current work also includes the Context Processing Layer (CPL), an SSRN-accepted
-                            preprint proposing semantic observability for multi-agent AI systems.
+                            The research has produced published taxonomies and a systematic literature review of data risks in AI, quantum computing, and data
+                            privacy; a federated observability architecture pattern published in <em>Information and Software Technology</em>; and the Context
+                            Processing Layer (CPL), published through SSRN, which proposes semantic observability for multi-agent AI systems.
                         </p>
                         <ul className="list-disc list-outside ml-4 mt-4 space-y-2">
                             <li className="text-text">
