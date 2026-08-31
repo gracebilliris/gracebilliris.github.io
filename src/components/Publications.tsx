@@ -28,7 +28,7 @@ const publications = [
             </>
         ),
         href: "https://link.springer.com/book/10.1007/978-3-032-24810-7",
-        linkLabel: "Published proceedings",
+        linkLabel: "https://link.springer.com/book/10.1007/978-3-032-24810-7",
     },
     {
         citation: (
