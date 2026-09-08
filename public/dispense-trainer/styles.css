@@ -69,18 +69,27 @@ textarea:focus-visible {
 }
 
 .desktop-shell {
+  height: 100vh;
   min-height: 100vh;
-  padding: 8px 8px 38px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .app-window {
-  min-height: calc(100vh - 46px);
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   border: 1px solid #6f8196;
   background: var(--color-app-bg);
   box-shadow: var(--shadow-window);
 }
 
 .title-bar {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -185,6 +194,7 @@ textarea:focus-visible {
 }
 
 .disclaimer-banner {
+  flex: 0 0 auto;
   padding: 7px 12px;
   border-bottom: 1px solid #ccb06f;
   background: linear-gradient(180deg, #fff0ca 0%, #f5deaa 100%);
@@ -192,6 +202,7 @@ textarea:focus-visible {
 }
 
 .quick-launch {
+  flex: 0 0 auto;
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 1px;
@@ -262,6 +273,9 @@ textarea:focus-visible {
 }
 
 .workspace {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
   padding: 10px;
 }
 
@@ -964,15 +978,11 @@ textarea:focus-visible {
 }
 
 .status-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  flex: 0 0 auto;
   min-height: 28px;
   padding: 0 6px;
   border-top: 1px solid #6e7f93;
   background: linear-gradient(180deg, #ebf1f7 0%, #d4dde7 100%);
-  z-index: 40;
 }
 
 .status-field {
@@ -1037,7 +1047,8 @@ textarea:focus-visible {
 
 @media (max-width: 1024px) {
   .desktop-shell {
-    padding: 4px 4px 38px;
+    padding: 4px;
+    gap: 4px;
   }
 
   .title-bar,

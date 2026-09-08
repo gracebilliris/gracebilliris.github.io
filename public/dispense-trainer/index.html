@@ -94,6 +94,24 @@
 
         <main id="app" class="workspace" aria-live="polite"></main>
       </div>
+
+      <footer class="status-bar" aria-label="Application status bar">
+        <div class="status-field">
+          <span class="status-field__label">User</span>
+          <strong id="status-user">Trainee Pharmacist</strong>
+        </div>
+        <div class="status-field status-field--clock">
+          <span class="status-field__label">Date / Time</span>
+          <strong id="status-datetime">—</strong>
+        </div>
+        <div class="status-field">
+          <span class="status-field__label">Pending</span>
+          <strong id="status-pending-count">0</strong>
+        </div>
+        <div class="status-field status-field--version">
+          <strong id="status-version">PracticeRx Trainer v1.0 (Practice Mode)</strong>
+        </div>
+      </footer>
     </div>
 
     <div id="label-modal" class="modal" aria-hidden="true">
@@ -111,24 +129,6 @@
     </div>
 
     <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
-
-    <footer class="status-bar" aria-label="Application status bar">
-      <div class="status-field">
-        <span class="status-field__label">User</span>
-        <strong id="status-user">Trainee Pharmacist</strong>
-      </div>
-      <div class="status-field status-field--clock">
-        <span class="status-field__label">Date / Time</span>
-        <strong id="status-datetime">—</strong>
-      </div>
-      <div class="status-field">
-        <span class="status-field__label">Pending</span>
-        <strong id="status-pending-count">0</strong>
-      </div>
-      <div class="status-field status-field--version">
-        <strong id="status-version">PracticeRx Trainer v1.0 (Practice Mode)</strong>
-      </div>
-    </footer>
 
     <script defer src="data.js"></script>
     <script defer src="app.js"></script>
