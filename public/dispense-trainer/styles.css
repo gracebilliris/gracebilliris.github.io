@@ -898,6 +898,10 @@ textarea:focus-visible {
   box-shadow: 0 20px 42px rgba(18, 31, 51, 0.3);
 }
 
+.modal__dialog--wide {
+  width: min(1020px, calc(100vw - 36px));
+}
+
 .modal__header,
 .modal__content {
   padding: 10px 12px;
@@ -1028,6 +1032,336 @@ textarea:focus-visible {
   margin-top: 10px;
 }
 
+.dispense-screen,
+.dispense-wait-screen,
+.dispense-screen__rows {
+  display: grid;
+  gap: 10px;
+}
+
+.dispense-screen {
+  padding: 10px;
+  border: 1px solid var(--color-app-border);
+  background: linear-gradient(180deg, #fbfdff 0%, #eef3f8 100%);
+}
+
+.dispense-screen__headerbar,
+.dispense-screen__footerbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-app-border);
+  background: var(--color-app-surface);
+}
+
+.dispense-screen__shortcut-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.dispense-screen__alerts,
+.dispense-screen__history-drawer,
+.dispense-screen__lookup-popover {
+  padding: 10px;
+  border: 1px solid var(--color-app-border);
+  background: var(--color-app-surface);
+}
+
+.dispense-screen__row {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 10px;
+  border: 1px solid var(--color-app-border);
+  background: #fff;
+}
+
+.dispense-screen__step-number {
+  display: grid;
+  place-items: center;
+  min-height: 34px;
+  border: 1px solid #7588a0;
+  background: linear-gradient(180deg, #e3ebf5 0%, #ced9e6 100%);
+  color: #1e3553;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dispense-screen__field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.dispense-screen__field label {
+  color: #223650;
+  font-weight: 600;
+}
+
+.dispense-screen__inline-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) repeat(2, auto);
+  gap: 10px;
+  align-items: center;
+}
+
+.toggle-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 4px 8px;
+  border: 1px solid var(--color-app-grid);
+  background: linear-gradient(180deg, #ffffff 0%, #f2f6fa 100%);
+}
+
+.toggle-field input {
+  width: 15px;
+  height: 15px;
+}
+
+.dispense-screen__history-drawer .table-wrap,
+.dispense-screen__lookup-popover .table-wrap {
+  margin-top: 8px;
+}
+
+.dispense-wait-screen {
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+}
+
+.dispense-wait-screen__summary,
+.dispense-wait-screen__actions {
+  display: grid;
+  gap: 10px;
+}
+
+.dispense-wait-screen__actions {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dispense-wait-screen__action {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  min-height: 110px;
+  padding: 12px;
+  border: 1px solid #7f8f9f;
+  background: linear-gradient(180deg, #ffffff 0%, #ebf1f7 100%);
+  text-align: left;
+  box-shadow: var(--shadow-raised);
+}
+
+.dispense-wait-screen__shortcut {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #7c8ea5;
+  background: #dce7f4;
+  color: #15375f;
+  font-weight: 700;
+}
+
+.kv-grid--wait {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 10px;
+  border: 1px solid var(--color-app-border);
+  background: #fff;
+}
+
+.document-preview {
+  display: grid;
+  gap: 10px;
+}
+
+.document-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.document-preview--pbs-script {
+  padding-bottom: 6px;
+}
+
+.pbs-script-sheet {
+  display: grid;
+  gap: 0;
+  color: #21302d;
+}
+
+.pbs-script-sheet__training-banner {
+  padding: 9px 12px;
+  border: 2px solid #586f67;
+  border-bottom: 0;
+  background: #ecf4d9;
+  color: #314840;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.pbs-script-sheet__paper {
+  display: grid;
+  grid-template-columns: 165px minmax(0, 1fr);
+  border: 2px solid #586f67;
+  background: linear-gradient(180deg, #dbe8c7 0%, #d3e3be 100%);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.pbs-script-sheet__claim-strip {
+  display: grid;
+  gap: 10px;
+  padding: 14px 10px;
+  border-right: 2px solid rgba(72, 96, 86, 0.45);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.claim-box {
+  display: grid;
+  gap: 6px;
+  padding: 9px 8px;
+  border: 1px solid rgba(61, 86, 77, 0.45);
+  background: rgba(248, 251, 243, 0.58);
+}
+
+.claim-box--stamp {
+  min-height: 120px;
+  align-content: start;
+}
+
+.claim-box__label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #52675f;
+}
+
+.pbs-script-sheet__main {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+.pbs-script-sheet__prescriber,
+.pbs-script-sheet__patient,
+.pbs-script-sheet__authority,
+.pbs-script-sheet__signature,
+.pbs-script-item {
+  padding: 10px;
+  border: 1px solid rgba(61, 86, 77, 0.45);
+  background: rgba(249, 252, 244, 0.68);
+}
+
+.pbs-script-sheet__prescriber p,
+.pbs-script-sheet__patient p,
+.pbs-script-item__directions p,
+.pbs-script-sheet__footer-note {
+  margin: 4px 0 0;
+}
+
+.pbs-script-sheet__items {
+  display: grid;
+  gap: 10px;
+}
+
+.pbs-script-item {
+  display: grid;
+  gap: 8px;
+}
+
+.pbs-script-item__slot {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #54685e;
+}
+
+.pbs-script-item__checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 4px 8px;
+  border: 1px solid rgba(61, 86, 77, 0.45);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.pbs-script-item__checkbox.is-checked {
+  background: rgba(235, 244, 217, 0.75);
+}
+
+.pbs-script-item__name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pbs-script-item__generic {
+  color: #4f635b;
+}
+
+.pbs-script-item__meta-grid,
+.pbs-script-sheet__authority,
+.pbs-script-sheet__signature {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.pbs-script-item__meta-grid .small-label,
+.pbs-script-sheet__authority .small-label,
+.pbs-script-sheet__signature .small-label {
+  display: block;
+}
+
+.pbs-script-item__s8-note {
+  padding: 8px 9px;
+  border: 1px solid rgba(132, 65, 82, 0.35);
+  background: rgba(249, 229, 235, 0.6);
+  color: #6c3140;
+}
+
+.pbs-script-item--empty {
+  min-height: 92px;
+  align-content: center;
+  background: rgba(255, 255, 255, 0.26);
+  color: #62736b;
+}
+
+.pbs-script-item__empty-copy {
+  color: #62736b;
+}
+
+.pbs-script-sheet__signature-line {
+  margin-top: 6px;
+  min-height: 28px;
+  padding-top: 10px;
+  border-bottom: 2px solid rgba(61, 86, 77, 0.65);
+  color: #4f635b;
+}
+
+.pbs-script-sheet__footer-note {
+  padding: 8px 12px;
+  border: 2px solid #586f67;
+  border-top: 0;
+  background: #eef5de;
+  color: #465a52;
+  font-size: 11px;
+  text-align: center;
+}
+
+.pbs-script-sheet--s8 .pbs-script-sheet__training-banner {
+  background: #e8f0d0;
+}
+
 @media (max-width: 1180px) {
   .quick-launch {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1036,7 +1370,8 @@ textarea:focus-visible {
   .grid-two,
   .grid-sidebar,
   .form-split,
-  .grid-three {
+  .grid-three,
+  .dispense-wait-screen {
     grid-template-columns: 1fr;
   }
 
@@ -1063,7 +1398,13 @@ textarea:focus-visible {
   .form-grid,
   .form-grid--three,
   .label-grid,
-  .kv-grid {
+  .kv-grid,
+  .dispense-screen__inline-grid,
+  .dispense-wait-screen__actions,
+  .pbs-script-sheet__paper,
+  .pbs-script-item__meta-grid,
+  .pbs-script-sheet__authority,
+  .pbs-script-sheet__signature {
     grid-template-columns: 1fr;
   }
 
@@ -1076,6 +1417,22 @@ textarea:focus-visible {
     flex: 1 1 100%;
     border-right: 0;
     border-top: 1px solid #b7c2cf;
+  }
+
+  .dispense-screen__headerbar,
+  .dispense-screen__footerbar,
+  .document-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dispense-screen__row {
+    grid-template-columns: 1fr;
+  }
+
+  .pbs-script-sheet__claim-strip {
+    border-right: 0;
+    border-bottom: 2px solid rgba(72, 96, 86, 0.45);
   }
 }
 
@@ -1094,7 +1451,8 @@ textarea:focus-visible {
   .status-bar,
   .toast-region,
   .modal__header,
-  .label-actions {
+  .label-actions,
+  .document-actions {
     display: none !important;
   }
 
@@ -1119,5 +1477,14 @@ textarea:focus-visible {
 
   .modal__content {
     padding: 0;
+  }
+
+  .document-preview--pbs-script,
+  .pbs-script-sheet,
+  .pbs-script-sheet__paper,
+  .pbs-script-sheet__training-banner,
+  .pbs-script-sheet__footer-note {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }
