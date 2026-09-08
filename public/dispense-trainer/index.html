@@ -10,64 +10,90 @@
     />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f596c'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white'%3ERx%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23183053'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white'%3ERx%3C/text%3E%3C/svg%3E"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <header class="app-header">
-        <div class="brand-block">
-          <div class="brand-mark" aria-hidden="true">Rx</div>
-          <div>
-            <p class="eyebrow">Offline training workspace</p>
-            <h1>PracticeRx Dispense Trainer</h1>
+    <div class="desktop-shell">
+      <div class="app-window">
+        <header class="title-bar">
+          <div class="title-bar__brand">
+            <div class="brand-mark" aria-hidden="true">Rx</div>
+            <div>
+              <p class="title-bar__eyebrow">Offline training workspace</p>
+              <h1>PracticeRx Dispense Trainer</h1>
+            </div>
           </div>
-        </div>
-        <div class="header-meta">
-          <div class="header-stat">
-            <span class="header-stat__label">Pending queue</span>
-            <strong id="header-pending-count">0</strong>
+          <div class="title-bar__meta" aria-label="Training status summary">
+            <div class="title-stat">
+              <span class="title-stat__label">Pending queue</span>
+              <strong id="header-pending-count">0</strong>
+            </div>
+            <div class="title-stat">
+              <span class="title-stat__label">Dispensed today</span>
+              <strong id="header-dispensed-count">0</strong>
+            </div>
           </div>
-          <div class="header-stat">
-            <span class="header-stat__label">Dispensed today</span>
-            <strong id="header-dispensed-count">0</strong>
-          </div>
-        </div>
-      </header>
+        </header>
 
-      <div class="disclaimer-banner" role="note">
-        Training Simulator for pharmacy dispensing practice — original design, not affiliated with, endorsed by, or a copy of any commercial dispensing product.
+        <div class="disclaimer-banner" role="note">
+          Training Simulator for pharmacy dispensing practice — original design, not affiliated with, endorsed by, or a copy of any commercial dispensing product.
+        </div>
+
+        <nav id="app-nav" class="quick-launch" aria-label="Primary">
+          <button class="quick-launch__item is-active" data-nav-view="dashboard" type="button">
+            <span class="quick-launch__icon" aria-hidden="true">▦</span>
+            <span class="quick-launch__copy">
+              <span class="quick-launch__title">Dashboard</span>
+              <span class="quick-launch__meta">Queue overview</span>
+            </span>
+            <span class="quick-launch__shortcut">Alt+1</span>
+          </button>
+          <button class="quick-launch__item" data-nav-view="patient-search" type="button">
+            <span class="quick-launch__icon" aria-hidden="true">⌕</span>
+            <span class="quick-launch__copy">
+              <span class="quick-launch__title">Patient Search</span>
+              <span class="quick-launch__meta">Profiles &amp; allergies</span>
+            </span>
+            <span class="quick-launch__shortcut">Alt+2</span>
+          </button>
+          <button class="quick-launch__item" data-nav-view="new-script" type="button">
+            <span class="quick-launch__icon" aria-hidden="true">✎</span>
+            <span class="quick-launch__copy">
+              <span class="quick-launch__title">New Script</span>
+              <span class="quick-launch__meta">Queue data entry</span>
+            </span>
+            <span class="quick-launch__shortcut">Alt+3</span>
+          </button>
+          <button class="quick-launch__item" data-nav-view="drug-lookup" type="button">
+            <span class="quick-launch__icon" aria-hidden="true">⚕</span>
+            <span class="quick-launch__copy">
+              <span class="quick-launch__title">Drug Lookup</span>
+              <span class="quick-launch__meta">Catalogue &amp; stock</span>
+            </span>
+            <span class="quick-launch__shortcut">Alt+4</span>
+          </button>
+          <button class="quick-launch__item" data-nav-view="final-check" type="button">
+            <span class="quick-launch__icon" aria-hidden="true">☑</span>
+            <span class="quick-launch__copy">
+              <span class="quick-launch__title">Final Check</span>
+              <span class="quick-launch__meta">Verification queue</span>
+            </span>
+            <span class="quick-launch__shortcut">Alt+5</span>
+          </button>
+          <button class="quick-launch__item" data-nav-view="history" type="button">
+            <span class="quick-launch__icon" aria-hidden="true">▤</span>
+            <span class="quick-launch__copy">
+              <span class="quick-launch__title">History</span>
+              <span class="quick-launch__meta">Dispense audit</span>
+            </span>
+            <span class="quick-launch__shortcut">Alt+6</span>
+          </button>
+        </nav>
+
+        <main id="app" class="workspace" aria-live="polite"></main>
       </div>
-
-      <nav id="app-nav" class="quick-launch" aria-label="Primary">
-        <button class="quick-launch__item is-active" data-nav-view="dashboard" type="button">
-          <span class="quick-launch__title">Dashboard</span>
-          <span class="quick-launch__meta">Queue overview</span>
-        </button>
-        <button class="quick-launch__item" data-nav-view="patient-search" type="button">
-          <span class="quick-launch__title">Patient Search</span>
-          <span class="quick-launch__meta">Profiles &amp; allergies</span>
-        </button>
-        <button class="quick-launch__item" data-nav-view="new-script" type="button">
-          <span class="quick-launch__title">New Script</span>
-          <span class="quick-launch__meta">Add to queue</span>
-        </button>
-        <button class="quick-launch__item" data-nav-view="drug-lookup" type="button">
-          <span class="quick-launch__title">Drug Lookup</span>
-          <span class="quick-launch__meta">Catalog &amp; stock</span>
-        </button>
-        <button class="quick-launch__item" data-nav-view="final-check" type="button">
-          <span class="quick-launch__title">Final Check</span>
-          <span class="quick-launch__meta">Verify before dispense</span>
-        </button>
-        <button class="quick-launch__item" data-nav-view="history" type="button">
-          <span class="quick-launch__title">History</span>
-          <span class="quick-launch__meta">Audit trail</span>
-        </button>
-      </nav>
-
-      <main id="app" class="app-main" aria-live="polite"></main>
     </div>
 
     <div id="label-modal" class="modal" aria-hidden="true">
@@ -75,7 +101,7 @@
       <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="label-modal-title">
         <div class="modal__header">
           <div>
-            <p class="eyebrow">Training label preview</p>
+            <p class="title-bar__eyebrow">Training label preview</p>
             <h2 id="label-modal-title">Dispensing Label</h2>
           </div>
           <button class="icon-button" type="button" data-close-modal="true" aria-label="Close label preview">×</button>
@@ -85,6 +111,24 @@
     </div>
 
     <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+    <footer class="status-bar" aria-label="Application status bar">
+      <div class="status-field">
+        <span class="status-field__label">User</span>
+        <strong id="status-user">Trainee Pharmacist</strong>
+      </div>
+      <div class="status-field status-field--clock">
+        <span class="status-field__label">Date / Time</span>
+        <strong id="status-datetime">—</strong>
+      </div>
+      <div class="status-field">
+        <span class="status-field__label">Pending</span>
+        <strong id="status-pending-count">0</strong>
+      </div>
+      <div class="status-field status-field--version">
+        <strong id="status-version">PracticeRx Trainer v1.0 (Practice Mode)</strong>
+      </div>
+    </footer>
 
     <script defer src="data.js"></script>
     <script defer src="app.js"></script>
